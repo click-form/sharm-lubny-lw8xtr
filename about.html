@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас — Перукарня «Шарм» у Лубнах</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#333333',
+                            pink: '#E91E63',
+                            dark: '#1a1a1a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-pink-500 selection:text-white">
+
+    <!-- Навігація -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Логотип -->
+            <a href="index.html" class="text-2xl font-bold tracking-wider text-gray-900 flex items-center gap-2">
+                <span class="text-pink-600">✦</span> ШАРМ
+            </a>
+
+            <!-- Меню -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="index.html" class="hover:text-pink-600 transition" data-i18n="nav_home">Головна</a>
+                <a href="about.html" class="text-pink-600 font-semibold" data-i18n="nav_about">Про нас</a>
+                <a href="index.html#menu" class="hover:text-pink-600 transition" data-i18n="nav_menu">Меню</a>
+                <a href="index.html#gallery" class="hover:text-pink-600 transition" data-i18n="nav_gallery">Галерея</a>
+                <a href="index.html#contacts" class="hover:text-pink-600 transition" data-i18n="nav_contacts">Контакти</a>
+            </nav>
+
+            <!-- Дії (Перемикач мов + Кнопка) -->
+            <div class="flex items-center gap-4">
+                <!-- Перемикач мов -->
+                <div class="flex bg-gray-100 p-1 rounded-full text-xs font-semibold">
+                    <button onclick="setLang('uk')" class="px-2.5 py-1 rounded-full transition hover:text-pink-600 focus:bg-white focus:shadow-sm">UA</button>
+                    <button onclick="setLang('ru')" class="px-2.5 py-1 rounded-full transition hover:text-pink-600 focus:bg-white focus:shadow-sm">RU</button>
+                    <button onclick="setLang('en')" class="px-2.5 py-1 rounded-full transition hover:text-pink-600 focus:bg-white focus:shadow-sm">EN</button>
+                </div>
+
+                <!-- Кнопка забронювати -->
+                <a href="index.html#booking" class="hidden sm:inline-block bg-pink-600 hover:bg-pink-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-pink-600/20 transition-all hover:shadow-xl hover:-translate-y-0.5" data-i18n="nav_booking">
+                    Забронювати
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Головний блок сторінки Про нас -->
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-pink-600 font-semibold tracking-widest uppercase text-sm mb-3 block" data-i18n="about_badge">Історія та цінності</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-6" data-i18n="about_title">Про перукарню «Шарм»</h1>
+            <p class="text-lg text-gray-600 leading-relaxed" data-i18n="about_subtitle">Місце, де ваші волоси отримують професійний догляд, а ви — затишок та чудовий настрій.</p>
+        </div>
+
+        <!-- Історія та опис -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-gray-900" data-i18n="history_title">Наша історія</h2>
+                <p class="text-gray-600 leading-relaxed" data-i18n="history_p1">
+                    Перукарня «Шарм» розташована за адресою вул. Ярослава Мудрого, 46 у місті Лубни. Заклад пропонує широкий спектр перукарських послуг для мешканців та гостей міста. Досвідчені майстри дбають про створення стильних зачісок, сучасних стрижок та догляд за волоссям.
+                </p>
+                <p class="text-gray-600 leading-relaxed" data-i18n="history_p2">
+                    Колектив перукарні орієнтований на якісний сервіс та індивідуальний підхід до кожного клієнта. Використання професійних засобів дозволяє досягати відмінних результатів та підтримувати здоров'я волосся.
+                </p>
+                <div class="pt-4 flex items-center gap-4">
+                    <div class="border-l-4 border-pink-600 pl-4">
+                        <p class="font-semibold text-gray-900" data-i18n="fact_1">Зручне розташування на вулиці Ярослава Мудрого в Лубнах</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-4 bg-gradient-to-r from-pink-500 to-gray-900 rounded-3xl opacity-25 blur-xl"></div>
+                <div class="relative bg-white p-4 rounded-3xl shadow-xl overflow-hidden aspect-4/3">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipN_placeholder1" alt="Перукарня Шарм Лубни" class="w-full h-full object-cover rounded-2xl hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80'">
+                </div>
+            </div>
+        </div>
+
+        <!-- Цінності -->
+        <div class="bg-white rounded-3xl p-10 md:p-16 shadow-xl border border-gray-100 mb-20">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-i18n="values_title">Наші цінності</h2>
+                <p class="text-gray-600" data-i18n="values_subtitle">Те, чому нам довіряють мешканці міста Лубни</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-2xl bg-gray-50 hover:bg-pink-50/50 transition">
+                    <div class="w-14 h-14 bg-pink-100 text-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold">01</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="val_1_title">Якість сервісу</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed" data-i18n="val_1_desc">Використання перевірених професійних засобів для догляду та фарбування волосся.</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-2xl bg-gray-50 hover:bg-pink-50/50 transition">
+                    <div class="w-14 h-14 bg-pink-100 text-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold">02</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="val_2_title">Індивідуальний підхід</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed" data-i18n="val_2_desc">Ми враховуємо побажання кожного клієнта, допомагаючи підібрати ідеальний образ.</p>
+                </div>
+
+                <div class="text-center p-6 rounded-2xl bg-gray-50 hover:bg-pink-50/50 transition">
+                    <div class="w-14 h-14 bg-pink-100 text-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold">03</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="val_3_title">Затишна атмосфера</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed" data-i18n="val_3_desc">Комфортна обстановку у центрі міста дозволяє приємно провести час під час процедур.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Команда / Майстри -->
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4" data-i18n="team_title">Наші майстри</h2>
+            <p class="text-gray-600" data-i18n="team_subtitle">Досвідчені професіонали своєї справи</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex flex-col md:flex-row items-center p-6 gap-6">
+                <img src="https://images.unsplash.com/photo-1595476108010-b9d1f67f13b5?auto=format&fit=crop&w=400&q=80" alt="Майстер перукарні" class="w-32 h-32 rounded-full object-cover shadow-md">
+                <div class="text-center md:text-left">
+                    <h3 class="text-xl font-bold text-gray-900" data-i18n="master_1_name">Марина</h3>
+                    <p class="text-pink-600 font-medium text-sm mb-2" data-i18n="master_1_role">Перукар-стиліст</p>
+                    <p class="text-gray-600 text-sm" data-i18n="master_1_desc">Спеціалізується на сучасних жіночих стрижках та складних техніках фарбування волосся.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex flex-col md:flex-row items-center p-6 gap-6">
+                <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=400&q=80" alt="Майстер перукарні" class="w-32 h-32 rounded-full object-cover shadow-md">
+                <div class="text-center md:text-left">
+                    <h3 class="text-xl font-bold text-gray-900" data-i18n="master_2_name">Світлана</h3>
+                    <p class="text-pink-600 font-medium text-sm mb-2" data-i18n="master_2_role">Майстер-універсал</p>
+                    <p class="text-gray-600 text-sm" data-i18n="master_2_desc">Професійні чоловічі та жіночі стрижки, якісне укладання та догляд за волоссям.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-900 text-gray-300 py-12 px-6 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <div>
+                <a href="#" class="text-2xl font-bold tracking-wider text-white flex items-center gap-2 mb-4">
+                    <span class="text-pink-500">✦</span> ШАРМ
+                </a>
+                <p class="text-sm text-gray-400" data-i18n="footer_desc">Професійні послуги краси та догляду за волоссям у місті Лубни.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4" data-i18n="footer_contacts_title">Контакти</h4>
+                <p class="text-sm text-gray-400 mb-2">вул. Ярослава Мудрого, 46, Лубни</p>
+                <p class="text-sm text-gray-400 mb-2">+380 99 426 0000</p>
+                <p class="text-sm text-gray-400" data-i18n="footer_hours">Пн-Нд: 08:00 - 18:00</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4" data-i18n="footer_nav_title">Навігація</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-pink-500 transition" data-i18n="nav_home">Головна</a></li>
+                    <li><a href="about.html" class="hover:text-pink-500 transition" data-i18n="nav_about">Про нас</a></li>
+                    <li><a href="index.html#menu" class="hover:text-pink-500 transition" data-i18n="nav_menu">Меню</a></li>
+                    <li><a href="index.html#booking" class="hover:text-pink-500 transition" data-i18n="nav_booking">Забронювати</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-6 border-t border-gray-800 text-center text-xs text-gray-500">
+            &copy; 2024 Перукарня «Шарм». Всі права захищені.
+        </div>
+    </footer>
+
+    <!-- Скрипт мультивмовності i18n -->
+    <script>
+      const i18n = {
+        uk: { 
+            "nav_home": "Головна", 
+            "nav_about": "Про нас", 
+            "nav_menu": "Меню", 
+            "nav_gallery": "Галерея", 
+            "nav_booking": "Забронювати", 
+            "nav_contacts": "Контакти", 
+            "btn_call": "Зателефонувати", 
+            "btn_book": "Забронювати", 
+            "hero_btn": "Переглянути меню",
+            "about_badge": "Історія та цінності",
+            "about_title": "Про перукарню «Шарм»",
+            "about_subtitle": "Місце, де ваші волоси отримують професійний догляд, а ви — затишок та чудовий настрій.",
+            "history_title": "Наша історія",
+            "history_p1": "Перукарня «Шарм» розташована за адресою вул. Ярослава Мудрого, 46 у місті Лубни. Заклад пропонує широкий спектр перукарських послуг для мешканців та гостей міста. Досвідчені майстри дбають про створення стильних зачісок, сучасних стрижок та догляд за волоссям.",
+            "history_p2": "Колектив перукарні орієнтований на якісний сервіс та індивідуальний підхід до кожного клієнта. Використання професійних засобів дозволяє досягати відмінних результатів та підтримувати здоров'я волосся.",
+            "fact_1": "Зручне розташування на вулиці Ярослава Мудрого в Лубнах",
+            "values_title": "Наші цінності",
+            "values_subtitle": "Те, чому нам довіряють мешканці міста Лубни",
+            "val_1_title": "Якість сервісу",
+            "val_1_desc": "Використання перевірених професійних засобів для догляду та фарбування волосся.",
+            "val_2_title": "Індивідуальний підхід",
+            "val_2_desc": "Ми враховуємо побажання кожного клієнта, допомагаючи підібрати ідеальний образ.",
+            "val_3_title": "Затишна атмосфера",
+            "val_3_desc": "Комфортна обстановку у центрі міста дозволяє приємно провести час під час процедур.",
+            "team_title": "Наші майстри",
+            "team_subtitle": "Досвідчені професіонали своєї справи",
+            "master_1_name": "Марина",
+            "master_1_role": "Перукар-стиліст",
+            "master_1_desc": "Спеціалізується на сучасних жіночих стрижках та складних техніках фарбування волосся.",
+            "master_2_name": "Світлана",
+            "master_2_role": "Майстер-універсал",
+            "master_2_desc": "Професійні чоловічі та жіночі стрижки, якісне укладання та догляд за волоссям.",
+            "footer_desc": "Професійні послуги краси та догляду за волоссям у місті Лубни.",
+            "footer_contacts_title": "Контакти",
+            "footer_hours": "Пн-Нд: 08:00 - 18:00",
+            "footer_nav_title": "Навігація"
+        },
+        ru: { 
+            "nav_home": "Главная", 
+            "nav_about": "О нас", 
+            "nav_menu": "Меню", 
+            "nav_gallery": "Галерея", 
+            "nav_booking": "Забронировать", 
+            "nav_contacts": "Контакты", 
+            "btn_call": "Позвонить", 
+            "btn_book": "Забронировать", 
+            "hero_btn": "Посмотреть меню",
+            "about_badge": "История и ценности",
+            "about_title": "О парикмахерской «Шарм»",
+            "about_subtitle": "Место, где ваши волосы получают профессиональный уход, а вы — уют и отличное настроение.",
+            "history_title": "Наша история",
+            "history_p1": "Парикмахерская «Шарм» расположена по адресу ул. Ярослава Мудрого, 46 в городе Лубны. Заведение предлагает широкий спектр парикмахерских услуг для жителей и гостей города. Опытные мастера заботятся о создании стильных причесок, современных стрижек и уходе за волосами.",
+            "history_p2": "Коллектив парикмахерской ориентирован на качественный сервис и индивидуальный подход к каждому клиенту. Использование профессиональных средств позволяет достигать отличных результатов и поддерживать здоровье волос.",
+            "fact_1": "Удобное расположение на улице Ярослава Мудрого в Лубнах",
+            "values_title": "Наши ценности",
+            "values_subtitle": "То, почему нам доверяют жители города Лубны",
+            "val_1_title": "Качество сервиса",
+            "val_1_desc": "Использование проверенных профессиональных средств для ухода и окрашивания волос.",
+            "val_2_title": "Индивидуальный подход",
+            "val_2_desc": "Мы учитываем пожелания каждого клиента, помогая подобрать идеальный образ.",
+            "val_3_title": "Уютная атмосфера",
+            "val_3_desc": "Комфортная обстановка в центре города позволяет приятно провести время во время процедур.",
+            "team_title": "Наши мастера",
+            "team_subtitle": "Опытные профессионалы своего дела",
+            "master_1_name": "Марина",
+            "master_1_role": "Парикмахер-стилист",
+            "master_1_desc": "Специализируется на современных женских стрижках и сложных техниках окрашивания волос.",
+            "master_2_name": "Светлана",
+            "master_2_role": "Мастер-универсал",
+            "master_2_desc": "Профессиональные мужские и женские стрижки, качественная укладка и уход за волосами.",
+            "footer_desc": "Профессиональные услуги красоты и ухода за волосами в городе Лубны.",
+            "footer_contacts_title": "Контакты",
+            "footer_hours": "Пн-Вс: 08:00 - 18:00",
+            "footer_nav_title": "Навигация"
+        },
+        en: { 
+            "nav_home": "Home", 
+            "nav_about": "About", 
+            "nav_menu": "Menu", 
+            "nav_gallery": "Gallery", 
+            "nav_booking": "Book", 
+            "nav_contacts": "Contacts", 
+            "btn_call": "Call Us", 
+            "btn_book": "Book Now", 
+            "hero_btn": "View Menu",
+            "about_badge": "History & Values",
+            "about_title": "About «Sharm» Hairdresser",
+            "about_subtitle": "A place where your hair gets professional care, and you get comfort and a great mood.",
+            "history_title": "Our History",
+            "history_p1": "«Sharm» hairdresser is located at 46 Yaroslava Mudroho St. in Lubny. The establishment offers a wide range of hair services for residents and guests of the city. Experienced masters take care of creating stylish hairstyles, modern haircuts, and hair care.",
+            "history_p2": "The team of the salon is focused on high-quality service and an individual approach to each client. The use of professional products allows achieving excellent results and maintaining hair health.",
+            "fact_1": "Convenient location on Yaroslava Mudroho Street in Lubny",
+            "values_title": "Our Values",
+            "values_subtitle": "Why the residents of Lubny trust us",
+            "val_1_title": "Quality Service",
+            "val_1_desc": "Using proven professional products for hair care and coloring.",
+            "val_2_title": "Individual Approach",
+            "val_2_desc": "We take into account the wishes of each client, helping to choose the perfect look.",
+            "val_3_title": "Cozy Atmosphere",
+            "val_3_desc": "A comfortable environment in the city center allows you to spend your time pleasantly during procedures.",
+            "team_title": "Our Masters",
+            "team_subtitle": "Experienced professionals in their field",
+            "master_1_name": "Maryna",
+            "master_1_role": "Hair Stylist",
+            "master_1_desc": "Specializes in modern women's haircuts and complex hair coloring techniques.",
+            "master_2_name": "Svitlana",
+            "master_2_role": "Universal Master",
+            "master_2_desc": "Professional men's and women's haircuts, quality styling, and hair care.",
+            "footer_desc": "Professional beauty and hair care services in Lubny.",
+            "footer_contacts_title": "Contacts",
+            "footer_hours": "Mon-Sun: 08:00 - 18:00",
+            "footer_nav_title": "Navigation"
+        }
+      };
+      
+      function setLang(lang) {
+        localStorage.setItem('site_lang', lang);
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (i18n[lang] && i18n[lang][key]) el.innerText = i18n[lang][key];
+        });
+        document.documentElement.lang = lang;
+      }
+      
+      document.addEventListener('DOMContentLoaded', () => {
+        const savedLang = localStorage.getItem('site_lang') || 'uk';
+        setLang(savedLang);
+      });
+    </script>
+</body>
+</html>
